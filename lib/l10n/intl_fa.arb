@@ -9,5 +9,12 @@
   "full_name_min_char": "نام و نام خانوادگی باید حداقل 3 کاراکتر باشد",
   "national_code_required" : "وارد کردن کد ملی الزامی است",
   "national_code_not_valid" : "کد ملی وارد شده معتبر نیست",
+  "your_document" : "مدارک شما",
+  "national_id_card_image" : "تصویر کارت ملی",
+  "birth_certificate_image" : "تصویر شناسنامه",
+  "national_id_card" : "کارت ملی",
+  "birth_certificate" : "شناسنامه",
+  "pick_image" : "انتخاب عکس",
+  "error_viewing_image" : "خطا در نمایش عکس",
   "end_of_file" : ""
 }
