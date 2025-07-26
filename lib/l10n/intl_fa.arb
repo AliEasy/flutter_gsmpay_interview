@@ -16,5 +16,6 @@
   "birth_certificate" : "شناسنامه",
   "pick_image" : "انتخاب عکس",
   "error_viewing_image" : "خطا در نمایش عکس",
+  "final_submit" : "ثبت نهایی",
   "end_of_file" : ""
 }
