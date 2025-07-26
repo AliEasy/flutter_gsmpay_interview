@@ -4,6 +4,10 @@ A Flutter-based mobile application built as part of the GsmPay interview process
 
 - Start time: 12:30 - 1404/05/04
 - End time: 18:00 - 1404/05/04
+- Preview Video
+```bash
+https://drive.google.com/file/d/1iA9KLQGHRO0-7WTx8it3XWQezLVxFGnd/view?usp=sharing
+```
 
 ## 🛠 Setup & Installation
 
