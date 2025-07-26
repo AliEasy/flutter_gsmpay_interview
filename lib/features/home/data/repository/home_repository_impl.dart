@@ -2,6 +2,8 @@ import 'dart:typed_data';
 
 import 'package:flutter_gsmpay_interview/core/model/result.dart';
 import 'package:flutter_gsmpay_interview/features/home/data/data_source/home_data_source.dart';
+import 'package:flutter_gsmpay_interview/features/home/data/model/submit_info_request_mapper.dart';
+import 'package:flutter_gsmpay_interview/features/home/domain/entity/submit_info_request_entity.dart';
 import 'package:flutter_gsmpay_interview/features/home/domain/repository/home_repository.dart';
 import 'package:injectable/injectable.dart';
 
@@ -25,6 +27,16 @@ class HomeRepositoryImpl implements HomeRepository {
   Future<Result<int>> uploadBirthCertificateImage(Uint8List image) async {
     try {
       final result = await _homeDataSource.uploadBirthCertificateImage(image);
+      return Result.success(data: result);
+    } catch (e) {
+      return const Result.failure(message: 'Error');
+    }
+  }
+
+  @override
+  Future<Result<String>> submitInfo(SubmitInfoRequestEntity data) async {
+    try {
+      final result = await _homeDataSource.submitInfo(data.mapper());
       return Result.success(data: result);
     } catch (e) {
       return const Result.failure(message: 'Error');
