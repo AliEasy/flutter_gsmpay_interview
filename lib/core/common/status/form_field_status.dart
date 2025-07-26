@@ -1,0 +1,1 @@
+enum FormFieldStatus { valid, invalid, empty }
