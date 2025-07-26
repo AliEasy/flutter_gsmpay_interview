@@ -34,6 +34,6 @@ flutter:
 
 flutter_intl:
   enabled: true
-  main_locale: en
+  main_locale: fa
   arb-dir: lib/l10n
-  template-arb-file: app_en.arb
+  template-arb-file: app_fa.arb
