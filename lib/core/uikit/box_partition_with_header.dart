@@ -21,7 +21,7 @@ class BoxPartitionWithHeader extends StatelessWidget {
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          SizedBox(height: 15),
+          const SizedBox(height: 15),
           Row(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
@@ -36,13 +36,13 @@ class BoxPartitionWithHeader extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(width: 15),
+              const SizedBox(width: 15),
               Expanded(
                 child: Text(title, style: Theme.of(context).textTheme.titleLarge),
               ),
             ],
           ),
-          SizedBox(height: 12),
+          const SizedBox(height: 12),
           Flexible(
             child: Padding(
               padding: const EdgeInsets.only(

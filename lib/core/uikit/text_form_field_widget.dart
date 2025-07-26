@@ -58,7 +58,7 @@ class TextFormFieldWidget extends StatelessWidget {
       case TextFormFieldType.nationalCode:
         return TextInputType.number;
       case TextFormFieldType.price:
-        return TextInputType.numberWithOptions(decimal: false, signed: false);
+        return const TextInputType.numberWithOptions(decimal: false, signed: false);
     }
   }
 
