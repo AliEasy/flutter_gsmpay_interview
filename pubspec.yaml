@@ -34,6 +34,29 @@ flutter:
   uses-material-design: true
   generate: true
 
+  fonts:
+    - family: Dana
+      fonts:
+        - asset: assets/font/dana_black.ttf
+          weight: 900
+        - asset: assets/font/dana_extra_bold.ttf
+          weight: 800
+        - asset: assets/font/dana_bold.ttf
+          weight: 700
+        - asset: assets/font/dana_demi_bold.ttf
+          weight: 600
+        - asset: assets/font/dana_medium.ttf
+          weight: 500
+        - asset: assets/font/dana_regular.ttf
+          weight: 400
+        - asset: assets/font/dana_light.ttf
+          weight: 300
+        - asset: assets/font/dana_ultra_light.ttf
+          weight: 200
+        - asset: assets/font/dana_thin.ttf
+          weight: 100
+
+
 flutter_intl:
   enabled: true
   main_locale: fa
