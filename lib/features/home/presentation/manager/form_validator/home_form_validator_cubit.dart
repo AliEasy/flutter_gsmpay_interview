@@ -15,6 +15,8 @@ class HomeFormValidatorCubit extends Cubit<HomeFormValidatorState> {
 
   FormFieldStatus _fullNameStatus = FormFieldStatus.empty;
   FormFieldStatus _nationalCodeStatus = FormFieldStatus.empty;
+  FormFieldStatus _nationalIdImageId = FormFieldStatus.empty;
+  FormFieldStatus _birthCertificateImageId = FormFieldStatus.empty;
 
   String? validateFullName(String? fullName) {
     final trimmed = fullName?.trim() ?? '';
@@ -51,9 +53,29 @@ class HomeFormValidatorCubit extends Cubit<HomeFormValidatorState> {
     }
   }
 
+  validateNationalIdImageId(int? imageId) {
+    if ((imageId ?? 0) != 0) {
+      _nationalIdImageId = FormFieldStatus.valid;
+    } else {
+      _nationalIdImageId = FormFieldStatus.invalid;
+    }
+    _validateForm();
+  }
+
+  validateBirthCertificateImageId(int? imageId) {
+    if ((imageId ?? 0) != 0) {
+      _birthCertificateImageId = FormFieldStatus.valid;
+    } else {
+      _birthCertificateImageId = FormFieldStatus.invalid;
+    }
+    _validateForm();
+  }
+
   _validateForm() {
     if (_fullNameStatus == FormFieldStatus.valid &&
-        _nationalCodeStatus == FormFieldStatus.valid) {
+        _nationalCodeStatus == FormFieldStatus.valid &&
+        _nationalIdImageId == FormFieldStatus.valid &&
+        _birthCertificateImageId == FormFieldStatus.valid) {
       emit(const HomeFormValidatorState.valid());
     } else {
       emit(const HomeFormValidatorState.invalid());
