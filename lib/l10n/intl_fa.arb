@@ -1,4 +1,13 @@
 {
   "@@locale": "fa",
+  "hire_you" : "استخدام شما",
+  "your_info" : "اطلاعات شما",
+  "full_name" : "نام و نام خانوادگی",
+  "national_code" : "کد ملی",
+  "monthly_salary" : "حقوق ماهیانه",
+  "full_name_is_required": "وارد کردن نام و نام خانوادگی اجباری است",
+  "full_name_min_char": "نام و نام خانوادگی باید حداقل 3 کاراکتر باشد",
+  "national_code_required" : "وارد کردن کد ملی الزامی است",
+  "national_code_not_valid" : "کد ملی وارد شده معتبر نیست",
   "end_of_file" : ""
 }
