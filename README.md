@@ -1,16 +1,55 @@
-# flutter_gsmpay_interview
 
-A new Flutter project.
+# 🌍 GsmPay Interview Task – Flutter Application
+A Flutter-based mobile application built as part of the GsmPay interview process. The app follows clean architecture principles with modular and testable code.
 
-## Getting Started
+- Start time: 12:30 - 1404/05/04
+- End time: 18:00 - 1404/05/04
 
-This project is a starting point for a Flutter application.
+## 🛠 Setup & Installation
 
-A few resources to get you started if this is your first Flutter project:
+### Prerequisites
+- Flutter SDK
+- Dart
+- Android Studio / VS Code
+- Emulator or real device
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+### Installation Steps
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- Clone the project
+```bash
+https://github.com/AliEasy/flutter_gsmpay_interview.git
+```
+- Install dependencies
+```bash
+flutter pub get
+```
+- Generate code
+```bash
+dart run build_runner build --delete-conflicting-outputs
+```
+- Generate l10n code
+```bash
+dart run intl_utils:generate
+```
+
+- Run The app
+
+## 🧱 Built With
+
+### Architecture
+This project uses **Clean Architecture** to separate responsibilities across layers:
+
+- **Presentation Layer**: Flutter UI + Cubit (Bloc)
+
+- **Domain Layer**: Entities + UseCases (Business Logic)
+
+- **Data Layer**: Repositories + Remote APIs (Fake Api Call)
+
+### Key Choices
+- **State Management**: Cubit for simple & predictable state handling.
+
+- **Dependency Injection**: injectable + get_it for scalable service location.
+
+- **Data Models & Immutability**: freezed for concise data classes and union types.
+
+- **Localization**: intl with .arb files, supporting multi-language extensibility.
