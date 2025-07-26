@@ -11,6 +11,7 @@ class ImagePickerBoxWidget extends StatefulWidget {
   final VoidCallback? onDelete;
   final XFile? selectedImage;
   final bool isLoading;
+  final bool required;
 
   const ImagePickerBoxWidget({
     super.key,
@@ -19,6 +20,7 @@ class ImagePickerBoxWidget extends StatefulWidget {
     this.selectedImage,
     this.onDelete,
     this.isLoading = false,
+    this.required = false,
   });
 
   @override
@@ -91,7 +93,11 @@ class _ImagePickerBoxWidgetState extends State<ImagePickerBoxWidget> {
                     Align(
                       alignment: Alignment.topRight,
                       child: IconButton(
-                        icon: const Icon(Icons.clear_rounded, size: 20, color: Colors.white,),
+                        icon: const Icon(
+                          Icons.clear_rounded,
+                          size: 20,
+                          color: Colors.white,
+                        ),
                         onPressed: () {
                           _selectedImage = null;
                           setState(() {});
@@ -106,7 +112,7 @@ class _ImagePickerBoxWidgetState extends State<ImagePickerBoxWidget> {
           ),
         ),
         const SizedBox(height: 10),
-        Text(widget.label),
+        Text('${widget.label}${widget.required ? '*' : ''}'),
       ],
     );
   }
