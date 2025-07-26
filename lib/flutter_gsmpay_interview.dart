@@ -18,11 +18,19 @@ class FlutterGsmpayInterview extends StatelessWidget {
       ],
       supportedLocales: const [Locale('fa')],
       debugShowCheckedModeBanner: false,
-      home: HomePage(),
+      home: const HomePage(),
       themeMode: ThemeMode.light,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         appBarTheme: const AppBarTheme(centerTitle: true),
+        elevatedButtonTheme: ElevatedButtonThemeData(
+          style: ElevatedButton.styleFrom(
+            backgroundColor: ThemeData.light().colorScheme.primary,
+            foregroundColor: ThemeData.light().colorScheme.surface,
+            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+            padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 8),
+          ),
+        ),
       ),
     );
   }
